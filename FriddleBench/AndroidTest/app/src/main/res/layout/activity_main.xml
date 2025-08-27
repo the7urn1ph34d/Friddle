@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_main.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="?attr/actionBarSize">
+
+    <!-- 第一行：输入框 + 按钮，向下移动内容以避开 ActionBar -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter data"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/processBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Process" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/modeGroup"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp">
+
+        <RadioButton
+            android:id="@+id/rbStringcopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="strcpy" />
+
+        <RadioButton
+            android:id="@+id/rbBase64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="base64" />
+
+        <RadioButton
+            android:id="@+id/rbAES"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aes(self)" />
+
+        <RadioButton
+            android:id="@+id/rbAESLib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aes(lib)" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/falsePositiveCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="False Positive Test Mode" />
+
+</LinearLayout>
